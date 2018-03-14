@@ -2,7 +2,7 @@ try {
    timeout(time: 20, unit: 'MINUTES') {
       def appName="cotd"
       def project=""
-      def tag="cats"
+      def tag="cities"
       def altTag="cities"
       def verbose="false"
 
@@ -22,11 +22,6 @@ try {
           openshiftTag srcStream: appName, srcTag: 'latest', destinationStream: appName, destinationTag: tag, verbose: verbose
           openshiftVerifyDeployment deploymentConfig: "${appName}", verbose: verbose
         }
-
-        stage("Test") {
-          input message: "Test deployment: http://${activeService}. Approve?", id: "approval"
-        }
-
       }
    }
 } catch (err) {
