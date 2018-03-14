@@ -1,10 +1,10 @@
 try {
    timeout(time: 20, unit: 'MINUTES') {
-      def appName="${NAME}"
+      def appName="cotd"
       def project=""
       def tag="cats"
       def altTag="cities"
-      def verbose="${VERBOSE}"
+      def verbose="false"
 
       node {
         project = env.PROJECT_NAME
