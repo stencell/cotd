@@ -2,7 +2,7 @@ try {
    timeout(time: 20, unit: 'MINUTES') {
       def appName="cotd"
       def project=""
-      def tag="cities"
+      def tag="cats"
       def verbose="false"
 
       node {
