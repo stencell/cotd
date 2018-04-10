@@ -7,7 +7,7 @@ Date: 2016
 
 <?php
 
-session_start()
+session_start();
 include('include/selector.php');
 
 header( 'Location: item.php' );
